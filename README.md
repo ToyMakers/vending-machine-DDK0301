@@ -1,46 +1,22 @@
-# Getting Started with Create React App
+# 🥤 Vending Machine 🥤
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/React-61Dafb?style=flat-square&logo=React&logoColor=white)
+![typescript](https://img.shields.io/badge/TypeScript-%233178c6?style=flat-square&logo=TypeScript&logoColor=white)
+![Redux](https://img.shields.io/badge/Redux-%23764abc?style=flat-square&logo=Redux&logoColor=white)
+![Sass](https://img.shields.io/badge/Sass-%23db7093?style=flat-square&logo=Sass&logoColor=white)
+![Jest](https://img.shields.io/badge/Jest-%23C21325?style=flat-square&logo=Jest&logoColor=white)
+![Storybook](https://img.shields.io/badge/Storybook-%23ff4785?style=flat-square&logo=Storybook&logoColor=white)
 
-## Available Scripts
+간단한 자판기 프로젝트입니다.  
+`TypeScript`와 `Jest`를 주로 공부하기 위한 프로젝트입니다.
 
-In the project directory, you can run:
+## 요구사항
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 지갑의 코인은 [50, 100, 500, 1000]단위로 사용할 수 있다.
+- 음료는 [이름 / 재고 / 가격] 정보를 가지고 있다.
+- 지갑의 코인을 클릭 또는 자판기에 드래그하면 자판기에 표시된 금액이 증가한다.
+- 반환 레버를 클릭하면 자판기에 들어간 모든 코인은 반환구에 쌓이고 자판기에 표시된 금액이 0이 된다.
+- 동전 반환구를 클릭하면 쌓여있던 코인은 모두 지갑으로 되돌아 간다.
+- 자판기의 금액을 초과하지 않는 금액의 음료만 선택할 수 있다.
+- 재고가 없는 음료는 품절 처리되고 선택할 수 없다.
+- 선택한 음료는 문을 클릭하기 전까지는 기계안에 있고, 문을 클릭하면 선택했던 음료를 모두 인벤토리에 담을 수 있다.
