@@ -1,0 +1,92 @@
+@import 'utils/variables.scss';
+@import 'utils/mixins.scss';
+
+.drink {
+  @include drag-protect;
+  width: 6rem;
+  @mixin cap {
+    width: 100%;
+    height: 0.5rem;
+    border-top: 0.2rem solid #c3bfc4;
+    background-color: #c3bfc4;
+  }
+  &--top {
+    @include cap;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+  }
+  &--bottom {
+    @include cap;
+    border-bottom-left-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+  }
+  &--neck {
+    position: relative;
+    width: 100%;
+    height: 0.4rem;
+    background-color: darken(#6a73fb, 10);
+    @mixin curve {
+      position: absolute;
+      top: 0;
+      width: 0.4rem;
+      height: 0.4rem;
+      border-radius: 50%;
+      background-color: white;
+      content: '';
+    }
+    &::before {
+      @include curve;
+      right: 0;
+      transform: translateX(60%);
+    }
+    &::after {
+      @include curve;
+      left: 0;
+      transform: translateX(-60%);
+    }
+  }
+  &--middle {
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    background: linear-gradient(
+      135deg,
+      lighten(#6a73fb, 10),
+      #6a73fb,
+      lighten(#6a73fb, 10)
+    );
+  }
+  &--label {
+    @include flex-row-center-center;
+    position: absolute;
+    top: 30%;
+    left: -5%;
+    width: 100%;
+    height: 4rem;
+    color: white;
+    font-family: $font-point;
+    font-size: 2rem;
+    text-align: center;
+    white-space: pre-line;
+    transform: rotate(-45deg);
+  }
+}
+
+@each $name, $label-color in $color-drinks {
+  .#{$name} {
+    $color: $label-color;
+    .drink {
+      &--neck {
+        background-color: darken($color, 10);
+      }
+      &--middle {
+        background: linear-gradient(
+          135deg,
+          lighten($color, 10),
+          $color,
+          lighten($color, 10)
+        );
+      }
+    }
+  }
+}

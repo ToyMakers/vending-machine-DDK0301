@@ -1,0 +1,9 @@
+@import 'utils/mixins.scss';
+
+.drink_story {
+  @include flex-row-center;
+  width: 100%;
+  .drink {
+    margin: 10px;
+  }
+}
