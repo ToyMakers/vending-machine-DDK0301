@@ -20,10 +20,10 @@ module.exports = {
     config.resolve.extensions.push('.ts', '.tsx');
     config.resolve.alias = {
       '@': path.resolve(__dirname, '../src'),
-      '@scss': path.resolve(__dirname, './src/scss/*'),
-      '@commons': path.resolve(__dirname, './src/components/commons'),
-      '@layouts': path.resolve(__dirname, './src/components/layouts'),
-      '@contains': path.resolve(__dirname, './src/components/contains'),
+      '@scss': path.resolve(__dirname, '../src/scss'),
+      '@commons': path.resolve(__dirname, '../src/components/commons'),
+      '@layouts': path.resolve(__dirname, '../src/components/layouts'),
+      '@contains': path.resolve(__dirname, '../src/components/contains'),
     };
     config.node = {
       __dirname: true,
