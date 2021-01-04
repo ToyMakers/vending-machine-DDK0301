@@ -16,6 +16,21 @@
   align-items: center;
 }
 
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-center {
+  @include flex-column;
+  align-items: center;
+}
+
+@mixin flex-column-center-center {
+  @include flex-column-center;
+  justify-content: center;
+}
+
 // ****************
 // Function
 // ****************

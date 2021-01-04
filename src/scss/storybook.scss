@@ -7,3 +7,10 @@
     margin: 10px;
   }
 }
+.drinkcount_story {
+  @include flex-row-center;
+  width: 100%;
+  .drinkcount {
+    margin: 10px;
+  }
+}
