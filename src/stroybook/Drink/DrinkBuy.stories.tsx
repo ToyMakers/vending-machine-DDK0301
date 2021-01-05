@@ -3,16 +3,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { DrinkBuy, DrinkBuyProps } from '@layouts/DrinkLayout/DrinkBuy';
 
-const drinks = [
-  'coca-cola',
-  'dr-pepper',
-  'fanta',
-  'lets-be',
-  'sprite',
-  'tejava',
-  'water',
-  'welchs',
-];
+import drinks from './drinks.json';
 
 export default {
   title: 'Drink/DrinkBuy',

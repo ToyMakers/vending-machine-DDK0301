@@ -3,16 +3,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { DrinkCount, DrinkCountProps } from '@layouts/DrinkLayout/DrinkCount';
 
-const drinks = [
-  'coca-cola',
-  'dr-pepper',
-  'fanta',
-  'lets-be',
-  'sprite',
-  'tejava',
-  'water',
-  'welchs',
-];
+import drinks from './drinks.json';
 
 export default {
   title: 'Drink/DrinkCount',
@@ -50,5 +41,4 @@ export const items = (arg: DrinkCountProps) => {
 };
 items.argTypes = {
   name: { table: { disable: true } },
-  // count: { table: { disable: true } },
 };
