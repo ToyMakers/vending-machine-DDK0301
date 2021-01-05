@@ -1,0 +1,37 @@
+// ****************
+// Color
+// ****************
+
+$color-black: #000000;
+$color-white: #ffffff;
+
+$color-drinks: (
+  'coca-cola': #be222f,
+  'dr-pepper': #8a2231,
+  'fanta': #d47e2d,
+  'lets-be': #335b9f,
+  'sprite': #3c6929,
+  'tejava': #d9be87,
+  'water': #739ecc,
+  'welchs': #7c3a91,
+);
+
+$color-normal: green;
+$color-abnormal: red;
+$color-none: #181818;
+$color-none-border: #323232;
+
+// ****************
+// Font Weight
+// ****************
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// ****************
+// Font Stack
+// ****************
+$font-stack: 'Roboto', sans-serif;
+$font-point: 'Yellowtail', cursive;

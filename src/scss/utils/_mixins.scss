@@ -1,0 +1,44 @@
+// ****************
+// LayOut
+// ****************
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-row-center {
+  @include flex-row;
+  justify-content: center;
+}
+
+@mixin flex-row-center-center {
+  @include flex-row-center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-center {
+  @include flex-column;
+  align-items: center;
+}
+
+@mixin flex-column-center-center {
+  @include flex-column-center;
+  justify-content: center;
+}
+
+// ****************
+// Function
+// ****************
+
+@mixin drag-protect {
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}

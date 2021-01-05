@@ -1,0 +1,29 @@
+@import 'utils/mixins.scss';
+
+.drink_story {
+  @include flex-row-center;
+  width: 100%;
+  .drink {
+    margin: 10px;
+  }
+}
+.drinkcount_story {
+  @include flex-row-center;
+  width: 100%;
+  .drinkcount {
+    margin: 10px;
+  }
+}
+
+.drinkbuy_story {
+  width: 100%;
+  &--row {
+    @include flex-row-center;
+    .drinkbuy {
+      margin: 20px;
+    }
+  }
+  &--column {
+    @include flex-column-center;
+  }
+}

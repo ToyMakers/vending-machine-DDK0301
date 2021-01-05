@@ -1,0 +1,17 @@
+@import 'utils/variables.scss';
+@import 'utils/mixins.scss';
+
+.drinkcount {
+  @include flex-column;
+  @include drag-protect;
+  &--counter {
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+    width: 100%;
+    background-color: transparentize($color-black, 0.2);
+    color: $color-white;
+    font-size: 3rem;
+    font-weight: $font-weight-bold;
+    text-align: right;
+  }
+}
