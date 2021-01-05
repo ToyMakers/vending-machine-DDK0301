@@ -14,3 +14,16 @@
     margin: 10px;
   }
 }
+
+.drinkbuy_story {
+  width: 100%;
+  &--row {
+    @include flex-row-center;
+    .drinkbuy {
+      margin: 20px;
+    }
+  }
+  &--column {
+    @include flex-column-center;
+  }
+}
