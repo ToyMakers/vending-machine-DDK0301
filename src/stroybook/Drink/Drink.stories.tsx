@@ -15,7 +15,8 @@ const drinks = [
 ];
 
 export default {
-  title: 'Drink/drink',
+  title: 'Drink/Drink',
+  component: Drink,
   argTypes: {
     name: {
       control: {

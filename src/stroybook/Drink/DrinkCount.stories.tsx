@@ -39,16 +39,16 @@ const Template: Story<DrinkCountProps> = arg => (
 
 export const item = Template.bind({});
 
-export const items = () => {
+export const items = (arg: DrinkCountProps) => {
   return (
     <div className="drinkcount_story">
       {drinks.map(drink => (
-        <DrinkCount key={drink} name={drink} />
+        <DrinkCount {...arg} key={drink} name={drink} />
       ))}
     </div>
   );
 };
 items.argTypes = {
   name: { table: { disable: true } },
-  count: { table: { disable: true } },
+  // count: { table: { disable: true } },
 };

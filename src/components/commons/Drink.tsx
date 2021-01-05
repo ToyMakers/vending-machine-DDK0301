@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import '@scss/commons/Drink.scss';
 
 export interface DrinkProps {
-  /**  음료수 선택 */
+  /** 음료수 선택 */
   name: string;
 }
 

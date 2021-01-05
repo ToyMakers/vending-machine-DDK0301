@@ -3,6 +3,7 @@
 
 .drink {
   @include drag-protect;
+  $color: #6a73fb;
   width: 6rem;
   @mixin cap {
     width: 100%;
@@ -24,14 +25,15 @@
     position: relative;
     width: 100%;
     height: 0.4rem;
-    background-color: darken(#6a73fb, 10);
+    background-color: darken($color, 10);
+    overflow: hidden;
     @mixin curve {
       position: absolute;
       top: 0;
       width: 0.4rem;
       height: 0.4rem;
       border-radius: 50%;
-      background-color: white;
+      background-color: $color-white;
       content: '';
     }
     &::before {
@@ -51,9 +53,9 @@
     height: 10rem;
     background: linear-gradient(
       135deg,
-      lighten(#6a73fb, 10),
-      #6a73fb,
-      lighten(#6a73fb, 10)
+      lighten($color, 10),
+      $color,
+      lighten($color, 10)
     );
   }
   &--label {
@@ -63,7 +65,7 @@
     left: -5%;
     width: 100%;
     height: 4rem;
-    color: white;
+    color: $color-white;
     font-family: $font-point;
     font-size: 2rem;
     text-align: center;

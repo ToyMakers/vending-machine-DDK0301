@@ -24,6 +24,11 @@ export default {
         options: [...drinks],
       },
     },
+    price: {
+      control: {
+        type: 'number',
+      },
+    },
     onBuy: { defaultValue: null, table: { disable: true } },
   },
 } as Meta;

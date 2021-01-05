@@ -3,7 +3,7 @@ import { Drink } from '@commons/Drink';
 import '@scss/layouts/DrinkLayout/DrinkCount.scss';
 
 export interface DrinkCountProps {
-  /**  음료수 선택 */
+  /** 음료수 선택 */
   name: string;
   /** 음료수 개수 */
   count: number;
