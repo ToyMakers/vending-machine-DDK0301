@@ -5,11 +5,10 @@
   @include flex-column-center-center;
   position: relative;
   border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
+  width: 5rem;
+  height: 5rem;
   background: $color-coin;
   color: $color-coin-text;
-  font-size: 6rem;
   font-weight: $font-weight-bold;
   overflow: hidden;
   &.deactive {
@@ -25,7 +24,7 @@
   }
   &--outline {
     @include flex-column-center-center;
-    border: 0.4rem solid $color-coin-line;
+    border: 0.2rem solid $color-coin-line;
     border-radius: 50%;
     width: 95%;
     height: 95%;
@@ -33,9 +32,10 @@
   &--innerline {
     @include flex-column-center-center;
     @include drag-protect;
-    border: 0.2rem solid $color-coin-line;
+    border: 0.1rem solid $color-coin-line;
     border-radius: 50%;
     width: 90%;
     height: 90%;
+    font-size: 1.4rem;
   }
 }
