@@ -19,12 +19,12 @@
     background-color: $color-none;
     color: $color-none-border;
     font-family: $font-stack;
-    font-size: 2rem;
     font-weight: $font-weight-bold;
     cursor: not-allowed;
     z-index: 100;
     span {
       margin-left: 0.5rem;
+      font-size: 1.25rem;
     }
     &::before {
       position: absolute;
