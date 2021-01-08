@@ -19,7 +19,7 @@ export default {
 } as Meta;
 
 const Template: Story<DrinkProps> = arg => (
-  <div className="drink_story">
+  <div className="item_story">
     <Drink {...arg} />
   </div>
 );
@@ -28,7 +28,7 @@ export const item = Template.bind({});
 
 export const items = () => {
   return (
-    <div className="drink_story">
+    <div className="item_story">
       {drinks.map(name => (
         <Drink key={name} name={name} />
       ))}
