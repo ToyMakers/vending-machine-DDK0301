@@ -42,3 +42,11 @@
   -webkit-user-select: none;
   user-select: none;
 }
+
+@mixin scroll-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

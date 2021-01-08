@@ -1,0 +1,53 @@
+@import 'utils/variables.scss';
+@import 'utils/mixins.scss';
+.inventory {
+  margin-top: 2.5rem;
+  width: 30rem;
+  &--title {
+    padding: 1.5rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    width: 100%;
+    background-color: lighten($color-inventory, $amount: 8);
+    color: $color-white;
+    font-size: 2rem;
+    font-weight: $font-weight-bold;
+    text-align: center;
+  }
+  &--showstock {
+    padding: 1.5rem;
+    width: 100%;
+    background-color: $color-inventory;
+    color: $color-white;
+    text-align: right;
+    span {
+      font-size: 2rem;
+      margin-left: 0.5rem;
+      font-weight: $font-weight-bold;
+    }
+  }
+  &--drinks {
+    @include flex-row;
+    @include scroll-hidden;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem;
+    width: 100%;
+    height: 39rem;
+    background-color: $color-inventory-background;
+    overflow-y: scroll;
+    .drink {
+      &dummy {
+        width: 8rem;
+      }
+      &count {
+        margin: 1rem;
+      }
+      &--neck {
+        &::after,
+        &::before {
+          background-color: $color-inventory-background;
+        }
+      }
+    }
+  }
+}
