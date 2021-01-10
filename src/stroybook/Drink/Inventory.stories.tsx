@@ -17,6 +17,7 @@ export const oneDrink = () => {
   return makeStore(<Inventory />, {
     drink: {
       drinks: [],
+      storage: [],
       inventory: [{ name: 'coca-cola', count: 1 }],
     },
   });
@@ -25,6 +26,7 @@ export const FourDrink = () => {
   return makeStore(<Inventory />, {
     drink: {
       drinks: [],
+      storage: [],
       inventory: [
         { name: 'coca-cola', count: 1 },
         { name: 'dr-pepper', count: 1 },
@@ -38,6 +40,7 @@ export const AllDrink = () => {
   return makeStore(<Inventory />, {
     drink: {
       drinks: [],
+      storage: [],
       inventory: [
         { name: 'coca-cola', count: 1 },
         { name: 'dr-pepper', count: 1 },
