@@ -1,0 +1,30 @@
+@import 'utils/variables.scss';
+@import 'utils/mixins.scss';
+
+.showcase {
+  @include flex-column;
+  justify-content: space-between;
+  width: 40rem;
+  height: 28rem;
+  background-color: #ecf0f1;
+  &__row {
+    @include flex-row;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 1rem;
+    &--bar {
+      position: absolute;
+      right: 0;
+      bottom: -2.5rem;
+      width: 100%;
+      height: 5rem;
+      background-color: $color-vending-machine;
+    }
+  }
+  .drink--neck {
+    &::after,
+    &::before {
+      background-color: #ecf0f1;
+    }
+  }
+}
