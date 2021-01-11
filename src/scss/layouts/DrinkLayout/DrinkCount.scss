@@ -5,7 +5,7 @@
   @include flex-column;
   @include drag-protect;
   &--counter {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     padding: 0 0.5rem;
     width: 100%;
     background-color: transparentize($color-black, 0.2);

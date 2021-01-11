@@ -23,7 +23,7 @@ export default {
 } as Meta;
 
 const Template: Story<DrinkCountProps> = arg => (
-  <div className="drinkcount_story">
+  <div className="item_story">
     <DrinkCount {...arg} />
   </div>
 );
@@ -32,7 +32,7 @@ export const item = Template.bind({});
 
 export const items = (arg: DrinkCountProps) => {
   return (
-    <div className="drinkcount_story">
+    <div className="item_story">
       {drinks.map(drink => (
         <DrinkCount {...arg} key={drink} name={drink} />
       ))}
