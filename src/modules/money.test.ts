@@ -58,7 +58,7 @@ test('check payMoney action', () => {
 });
 
 test('check backMoney action', () => {
-  const TestPutMoney = money(
+  const TestPutMoney1 = money(
     {
       leftMoney: 0,
       useMoney: 1000,
@@ -68,8 +68,21 @@ test('check backMoney action', () => {
       type: 'money/BACKMONEY',
     },
   );
-  expect(TestPutMoney).toHaveProperty('useMoney', 0);
-  expect(TestPutMoney).toHaveProperty('returnMoney', 1000);
+  expect(TestPutMoney1).toHaveProperty('useMoney', 0);
+  expect(TestPutMoney1).toHaveProperty('returnMoney', 1000);
+
+  const TestPutMoney2 = money(
+    {
+      leftMoney: 0,
+      useMoney: 1000,
+      returnMoney: 500,
+    },
+    {
+      type: 'money/BACKMONEY',
+    },
+  );
+  expect(TestPutMoney2).toHaveProperty('useMoney', 0);
+  expect(TestPutMoney2).toHaveProperty('returnMoney', 1500);
 });
 
 test('check takeMoney action', () => {
