@@ -1,0 +1,16 @@
+@import 'utils/variables.scss';
+@import 'utils/mixins.scss';
+
+.coinenter {
+  @include flex-middle;
+  border: 0.5rem solid #c3bfc4;
+  border-radius: 100%;
+  height: 4rem;
+  width: 4rem;
+  background-color: darken(#c3bfc4, 10);
+  .hole {
+    height: 20%;
+    width: 80%;
+    background-color: $color-black;
+  }
+}

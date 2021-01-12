@@ -31,6 +31,12 @@
   justify-content: center;
 }
 
+@mixin flex-middle {
+  @include flex-column;
+  justify-content: center;
+  align-items: center;
+}
+
 // ****************
 // Function
 // ****************
