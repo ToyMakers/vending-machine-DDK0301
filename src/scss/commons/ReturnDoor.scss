@@ -1,6 +1,8 @@
 @import 'utils/variables.scss';
+@import 'utils/mixins.scss';
 
 .returndoor {
+  @include drag-protect;
   $door-border: 5px;
   border-top: $door-border solid lighten($color-vending-machine, 2%);
   border-left: $door-border solid darken($color-vending-machine, 2%);
@@ -31,6 +33,10 @@
   }
   &.exsit {
     background-color: darken(#f1c40f, 30%);
+  }
+  &.drink {
+    width: 40rem;
+    height: 8rem;
   }
   &.money {
     border-bottom: #{$door-border * 2} solid darken($color-vending-machine, 1%);

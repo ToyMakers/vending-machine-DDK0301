@@ -15,9 +15,9 @@ test('check action', () => {
   renderWithRedux(<ReturnButton />, {
     money: { leftMoney: 0, useMoney: 1000, returnMoney: 0 },
   });
-  const ReturnBeforeButton = screen.getByRole('button');
-  expect(ReturnBeforeButton).toBeEnabled();
+  const ReturnBeforeButton = screen.getByText('ReturnButton');
+  expect(ReturnBeforeButton.closest('button')).toBeEnabled();
   fireEvent.click(ReturnBeforeButton);
-  const ReturnAfterButton = screen.getByRole('button');
-  expect(ReturnAfterButton).toBeDisabled();
+  const ReturnAfterButton = screen.getByText('ReturnButton');
+  expect(ReturnAfterButton.closest('button')).toBeDisabled();
 });

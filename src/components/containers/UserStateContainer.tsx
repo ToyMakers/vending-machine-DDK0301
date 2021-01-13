@@ -4,7 +4,7 @@ import Inventory from '@layouts/DrinkLayout/Inventory';
 
 export default function UserStateContainer() {
   return (
-    <div className="userstate__container">
+    <div className="userstate">
       <Wallet />
       <Inventory />
     </div>

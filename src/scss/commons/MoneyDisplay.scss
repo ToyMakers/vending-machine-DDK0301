@@ -1,7 +1,9 @@
 @import 'utils/variables.scss';
+@import 'utils/mixins.scss';
 
 .moneydisplay {
-  $font-base: 1.5rem;
+  @include drag-protect;
+  $font-base: 1.7rem;
   $font-shadow-base: $font-base * 0.025;
   $color-base: $color-normal;
   display: flex;
@@ -9,8 +11,8 @@
   justify-content: space-between;
   padding: 0 0.8rem;
   border-radius: 0.5rem;
-  width: 10rem;
-  height: 3rem;
+  width: 12rem;
+  height: 4rem;
   background-color: $color-none;
   span {
     font-size: $font-base;
