@@ -1,0 +1,23 @@
+@import 'utils/variables.scss';
+
+.machine {
+  width: 44rem;
+  .container {
+    $door-border: 2rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    border-top: $door-border solid lighten($color-vending-machine, 2%);
+    border-left: $door-border solid darken($color-vending-machine, 2%);
+    border-right: $door-border solid darken($color-vending-machine, 2%);
+    background-color: $color-vending-machine;
+  }
+  &__leg {
+    display: flex;
+    justify-content: space-between;
+  }
+  .leg {
+    width: 10rem;
+    height: 1rem;
+    background-color: $color-black;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  }
+}
