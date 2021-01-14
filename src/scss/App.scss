@@ -1,5 +1,14 @@
 .App {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  margin: auto;
+  width: 80rem;
+  height: 100vh;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80rem;
+    min-width: 80rem;
+    min-height: 70rem;
+    height: 100vh;
+  }
 }

@@ -21,6 +21,21 @@ $color-abnormal: red;
 $color-none: #181818;
 $color-none-border: #323232;
 
+$color-coin: linear-gradient(143deg, #ffc001 0%, #ffd900 48%, #cc9900 100%);
+$color-coin-line: #c79600;
+$color-coin-text: #927008;
+
+$color-wallet: #2c3e50;
+$color-wallet-background: #34495e;
+
+$color-inventory: #7f8c8d;
+$color-inventory-background: #95a5a6;
+
+$color-vending-machine: #27ae60;
+
+$color-return-dark: #e67e22;
+$color-return-light: #f39c12;
+
 // ****************
 // Font Weight
 // ****************
@@ -35,3 +50,4 @@ $font-weight-bold: 700;
 // ****************
 $font-stack: 'Roboto', sans-serif;
 $font-point: 'Yellowtail', cursive;
+$font-kr: 'Noto Sans KR', sans-serif;

@@ -1,0 +1,7 @@
+@import 'utils/mixins.scss';
+
+.machinebottom {
+  @include flex-column;
+  justify-content: space-around;
+  height: 14rem;
+}

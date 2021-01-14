@@ -1,0 +1,33 @@
+@import 'utils/variables.scss';
+@import 'utils/mixins.scss';
+
+.moneydisplay {
+  @include drag-protect;
+  $font-base: 1.7rem;
+  $font-shadow-base: $font-base * 0.025;
+  $color-base: $color-normal;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.8rem;
+  border-radius: 0.5rem;
+  width: 12rem;
+  height: 4rem;
+  background-color: $color-none;
+  span {
+    font-size: $font-base;
+    font-weight: 700;
+  }
+  &.active {
+    color: $color-base;
+    span {
+      text-shadow: 0 0 $font-shadow-base * 1 #fff,
+        0 0 $font-shadow-base * 2 #fff, 0 0 $font-shadow-base * 3 $color-base,
+        0 0 $font-shadow-base * 4 $color-base,
+        0 0 $font-shadow-base * 5 $color-base;
+    }
+  }
+  &.deactive {
+    color: $color-none-border;
+  }
+}

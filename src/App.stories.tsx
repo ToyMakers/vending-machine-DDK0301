@@ -1,13 +1,14 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Meta } from '@storybook/react/types-6-0';
+import makeStore from '@utils/makeStore';
 
 import App from '@/App';
 
 export default {
-  title: 'App',
+  title: 'Main/App',
   component: App,
 } as Meta;
 
-const Template: Story = () => <App />;
-
-export const Default = Template.bind({});
+export const Main = () => {
+  return makeStore(<App />);
+};

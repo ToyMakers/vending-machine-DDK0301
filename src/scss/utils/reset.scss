@@ -61,11 +61,15 @@ video {
   padding: 0;
   border: 0;
   font-size: 62.5%;
-  font: $font-stack;
+  font-family: $font-stack;
   vertical-align: baseline;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   text-size-adjust: none;
+}
+
+html {
+  background-color: #ecf0f1;
 }
 
 footer,
@@ -114,6 +118,7 @@ button {
   padding: 0;
   border: none;
   text-decoration: none;
+  font-family: $font-stack;
   font-size: 1rem;
   cursor: pointer;
   text-align: center;

@@ -3,16 +3,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { DrinkBuy, DrinkBuyProps } from '@layouts/DrinkLayout/DrinkBuy';
 
-const drinks = [
-  'coca-cola',
-  'dr-pepper',
-  'fanta',
-  'lets-be',
-  'sprite',
-  'tejava',
-  'water',
-  'welchs',
-];
+import drinks from './drinks.json';
 
 export default {
   title: 'Drink/DrinkBuy',
@@ -34,7 +25,7 @@ export default {
 } as Meta;
 
 const Template: Story<DrinkBuyProps> = arg => (
-  <div className="drinkbuy_story--column">
+  <div className="item_story">
     <DrinkBuy {...arg} />
   </div>
 );
@@ -43,7 +34,7 @@ export const item = Template.bind({});
 
 export const items = (arg: DrinkBuyProps) => {
   return (
-    <div className="drinkbuy_story--row">
+    <div className="item_story">
       {drinks.map(drink => (
         <DrinkBuy {...arg} key={drink} name={drink} />
       ))}
@@ -56,7 +47,7 @@ items.argTypes = {
 
 export const itemsIsSale = (arg: DrinkBuyProps) => {
   return (
-    <div className="drinkbuy_story--row">
+    <div className="item_story">
       {drinks.map(drink => (
         <DrinkBuy {...arg} key={drink} name={drink} />
       ))}
@@ -71,7 +62,7 @@ itemsIsSale.argTypes = {
 
 export const itemsIsNotSale = (arg: DrinkBuyProps) => {
   return (
-    <div className="drinkbuy_story--row">
+    <div className="item_story">
       {drinks.map(drink => (
         <DrinkBuy {...arg} key={drink} name={drink} isSale={false} />
       ))}
@@ -86,7 +77,7 @@ itemsIsNotSale.argTypes = {
 
 export const itemsIsNotStock = (arg: DrinkBuyProps) => {
   return (
-    <div className="drinkbuy_story--row">
+    <div className="item_story">
       {drinks.map(drink => (
         <DrinkBuy {...arg} key={drink} name={drink} isStock={false} />
       ))}

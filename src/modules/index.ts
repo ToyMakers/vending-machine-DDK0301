@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
+import money from './money';
+import drink from './drink';
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({ money, drink });
 
 export default rootReducer;
 

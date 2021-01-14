@@ -1,0 +1,27 @@
+@import 'utils/variables.scss';
+@import 'utils/mixins.scss';
+
+.cooler {
+  @include flex-column;
+  justify-content: space-around;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 40rem;
+  height: 4rem;
+  background-color: darken($color-vending-machine, 5);
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0.1rem;
+    width: 100%;
+    height: 1rem;
+    background-color: darken($color-vending-machine, 10);
+  }
+  .hole {
+    border-radius: 0.1rem;
+    width: 18%;
+    height: 0.4rem;
+    background-color: darken($color-vending-machine, 15);
+  }
+}

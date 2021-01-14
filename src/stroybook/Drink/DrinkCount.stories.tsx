@@ -3,16 +3,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { DrinkCount, DrinkCountProps } from '@layouts/DrinkLayout/DrinkCount';
 
-const drinks = [
-  'coca-cola',
-  'dr-pepper',
-  'fanta',
-  'lets-be',
-  'sprite',
-  'tejava',
-  'water',
-  'welchs',
-];
+import drinks from './drinks.json';
 
 export default {
   title: 'Drink/DrinkCount',
@@ -32,7 +23,7 @@ export default {
 } as Meta;
 
 const Template: Story<DrinkCountProps> = arg => (
-  <div className="drinkcount_story">
+  <div className="item_story">
     <DrinkCount {...arg} />
   </div>
 );
@@ -41,7 +32,7 @@ export const item = Template.bind({});
 
 export const items = (arg: DrinkCountProps) => {
   return (
-    <div className="drinkcount_story">
+    <div className="item_story">
       {drinks.map(drink => (
         <DrinkCount {...arg} key={drink} name={drink} />
       ))}
@@ -50,5 +41,4 @@ export const items = (arg: DrinkCountProps) => {
 };
 items.argTypes = {
   name: { table: { disable: true } },
-  // count: { table: { disable: true } },
 };

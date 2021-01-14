@@ -21,9 +21,10 @@ module.exports = {
     config.resolve.alias = {
       '@': path.resolve(__dirname, '../src'),
       '@scss': path.resolve(__dirname, '../src/scss'),
+      '@utils': path.resolve(__dirname, '../src/utils'),
       '@commons': path.resolve(__dirname, '../src/components/commons'),
       '@layouts': path.resolve(__dirname, '../src/components/layouts'),
-      '@contains': path.resolve(__dirname, '../src/components/contains'),
+      '@containers': path.resolve(__dirname, '../src/components/containers'),
     };
     config.node = {
       __dirname: true,

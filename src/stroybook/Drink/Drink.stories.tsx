@@ -3,16 +3,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { Drink, DrinkProps } from '@commons/Drink';
 
-const drinks = [
-  'coca-cola',
-  'dr-pepper',
-  'fanta',
-  'lets-be',
-  'sprite',
-  'tejava',
-  'water',
-  'welchs',
-];
+import drinks from './drinks.json';
 
 export default {
   title: 'Drink/Drink',
@@ -28,7 +19,7 @@ export default {
 } as Meta;
 
 const Template: Story<DrinkProps> = arg => (
-  <div className="drink_story">
+  <div className="item_story">
     <Drink {...arg} />
   </div>
 );
@@ -37,7 +28,7 @@ export const item = Template.bind({});
 
 export const items = () => {
   return (
-    <div className="drink_story">
+    <div className="item_story">
       {drinks.map(name => (
         <Drink key={name} name={name} />
       ))}
