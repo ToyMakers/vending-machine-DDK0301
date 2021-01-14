@@ -47,7 +47,7 @@ function money(state: MoneyState = initialState, action: MoneyAction) {
       return {
         ...state,
         useMoney: 0,
-        returnMoney: state.useMoney,
+        returnMoney: state.returnMoney + state.useMoney,
       };
     case TAKEMONEY:
       return {

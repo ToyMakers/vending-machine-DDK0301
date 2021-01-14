@@ -1,6 +1,7 @@
 @import 'utils/variables.scss';
 @import 'utils/mixins.scss';
 .inventory {
+  @include drag-protect;
   margin-top: 2.5rem;
   width: 30rem;
   &--title {

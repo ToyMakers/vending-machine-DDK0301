@@ -1,0 +1,49 @@
+@import 'utils/variables.scss';
+
+@mixin button-style(
+  $color-base: $color-return-light,
+  $color-hover: $color-return-dark
+) {
+  background: $color-base;
+  box-shadow: 0 -1px 0 3px darken($color-base, 10%) inset,
+    0 3px 3px rgba(darken($color-base, 40%), 0.17),
+    0 8px rgba($color-white, 0.25) inset;
+  &:hover {
+    background: $color-hover;
+    box-shadow: 0 -1px 0 3px darken($color-hover, 10%) inset,
+      0 3px 3px rgba(darken($color-hover, 40%), 0.17),
+      0 8px rgba($color-white, 0.25) inset;
+  }
+  &:active {
+    background: $color-hover;
+    box-shadow: 0 0px 0 3px darken($color-hover, 10%) inset,
+      0 2px 3px rgba(darken($color-hover, 40%), 0.17),
+      0 8px rgba($color-white, 0.25) inset;
+  }
+}
+
+.returnbutton {
+  border: 3px solid $color-white;
+  border-radius: 100%;
+  height: 4rem;
+  width: 4rem;
+  button {
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: unset;
+    span {
+      visibility: hidden;
+    }
+  }
+  &.active {
+    @include button-style;
+    cursor: pointer;
+  }
+  &.deactive {
+    @include button-style($color-base: $color-none, $color-hover: $color-none);
+    button {
+      cursor: not-allowed;
+    }
+  }
+}

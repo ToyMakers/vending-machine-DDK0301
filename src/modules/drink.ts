@@ -39,16 +39,16 @@ const initialState: DrinkState = {
   inventory: [],
 };
 
-function money(state: DrinkState = initialState, action: DrinkAction) {
+function drink(state: DrinkState = initialState, action: DrinkAction) {
   switch (action.type) {
     case BUYDRINK: {
-      const changeDrinks = state.drinks.map(drink =>
-        drink.name === action.name
-          ? { ...drink, count: drink.count - 1 }
-          : { ...drink },
+      const changeDrinks = state.drinks.map(item =>
+        item.name === action.name
+          ? { ...item, count: item.count - 1 }
+          : { ...item },
       );
       const storageIndex = state.storage.findIndex(
-        drink => drink.name === action.name,
+        item => item.name === action.name,
       );
       if (storageIndex !== -1) {
         const newStorage = state.storage;
@@ -67,9 +67,9 @@ function money(state: DrinkState = initialState, action: DrinkAction) {
     }
     case GETDRINK: {
       let addInventory = state.storage;
-      const newinventory = state.inventory.map(drink => {
+      const newinventory = state.inventory.map(item => {
         const addDrinkIndex = addInventory.findIndex(newItem => {
-          return newItem.name === drink.name;
+          return newItem.name === item.name;
         });
         if (addDrinkIndex !== -1) {
           const addDrink = addInventory[addDrinkIndex];
@@ -77,9 +77,9 @@ function money(state: DrinkState = initialState, action: DrinkAction) {
             ...addInventory.slice(0, addDrinkIndex),
             ...addInventory.slice(addDrinkIndex + 1),
           ];
-          return { ...drink, count: drink.count + addDrink.count };
+          return { ...item, count: item.count + addDrink.count };
         }
-        return drink;
+        return item;
       });
       return {
         ...state,
@@ -92,4 +92,4 @@ function money(state: DrinkState = initialState, action: DrinkAction) {
   }
 }
 
-export default money;
+export default drink;
