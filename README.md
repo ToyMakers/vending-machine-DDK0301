@@ -22,6 +22,18 @@
 - 재고가 없는 음료는 품절 처리되고 선택할 수 없다.
 - 선택한 음료는 문을 클릭하기 전까지는 기계안에 있고, 문을 클릭하면 선택했던 음료를 모두 인벤토리에 담을 수 있다.
 
+## .env
+
+```bash
+# Linux, Mac OS(default)
+SASS_PATH=node_modules:src/scss
+SKIP_PREFLIGHT_CHECK=true
+
+# Window
+SASS_PATH=node_modules:./node_modules;./src/scss/
+SKIP_PREFLIGHT_CHECK=true
+```
+
 ## 실행
 
 ```bash
