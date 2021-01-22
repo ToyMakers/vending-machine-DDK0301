@@ -5,7 +5,7 @@
 ![Redux](https://img.shields.io/badge/Redux-%23764abc?style=flat-square&logo=Redux&logoColor=white)
 ![Sass](https://img.shields.io/badge/Sass-%23db7093?style=flat-square&logo=Sass&logoColor=white)
 ![Jest](https://img.shields.io/badge/Jest-%23C21325?style=flat-square&logo=Jest&logoColor=white)
-[![Storybook](https://img.shields.io/badge/Storybook-%23ff4785?style=flat-square&logo=Storybook&logoColor=white)](https://muvk1lwunpcrlffnebnzug-on.drv.tw/ddk-vending-machine/)
+[![Storybook](https://img.shields.io/badge/Storybook-%23ff4785?style=flat-square&logo=Storybook&logoColor=white)](https://muvk1lwunpcrlffnebnzug-on.drv.tw/vending-machine/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/756202c5-ca09-437e-9d01-e54f2c8e38db/deploy-status)](https://app.netlify.com/sites/ddkvendingmachine/deploys)
 
 간단한 자판기 프로젝트입니다.  
@@ -21,6 +21,18 @@
 - 자판기의 금액을 초과하지 않는 금액의 음료만 선택할 수 있다.
 - 재고가 없는 음료는 품절 처리되고 선택할 수 없다.
 - 선택한 음료는 문을 클릭하기 전까지는 기계안에 있고, 문을 클릭하면 선택했던 음료를 모두 인벤토리에 담을 수 있다.
+
+## .env
+
+```bash
+# Linux, Mac OS(default)
+SASS_PATH=node_modules:src/scss
+SKIP_PREFLIGHT_CHECK=true
+
+# Window
+SASS_PATH=node_modules:./node_modules;./src/scss/
+SKIP_PREFLIGHT_CHECK=true
+```
 
 ## 실행
 
@@ -44,7 +56,7 @@ yarn storybook
 ## 배포
 
 - [DDK-Vending-Machine](https://ddkvendingmachine.netlify.app/)
-- [Storybook](https://muvk1lwunpcrlffnebnzug-on.drv.tw/ddk-vending-machine/)
+- [Storybook](https://muvk1lwunpcrlffnebnzug-on.drv.tw/vending-machine/)
 
 ## 참고
 
